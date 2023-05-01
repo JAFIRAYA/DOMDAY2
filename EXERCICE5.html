@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="my-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt hic eos consequatur sit exercitationem eius tempora. Suscipit aut quae voluptates sapiente molestiae officiis alias cum praesentium nesciunt? Minima, id.</p>
+    <script>
+        const myElement = document.querySelector("#my-element");
+   myElement.addEventListener("click", function() {
+    this.style.backgroundColor = "yellow";
+});
+
+
+myElement.addEventListener("mouseover", function() {
+
+   const currentX = parseInt(this.style.left) || 0;
+   this.style.left = currentX + 10 + "px";
+});
+
+myElement.addEventListener("mouseout", function() {
+
+const currentY = parseInt(this.style.top) || 0;
+  
+this.style.top = currentY + 10 + "px";
+});
+
+
+myElement.addEventListener("dblclick", function() {
+const currentFontSize = parseInt(this.style.fontSize) || 16; 
+this.style.fontSize = currentFontSize + 2 + "px";
+});
+    </script>
+</body>
+</html>
